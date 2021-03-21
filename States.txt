@@ -1,0 +1,16 @@
+js object 
+private to component
+hold data about this component 
+state can be changed
+
+export class App extends React.Component {
+  state={
+    name:"value",
+    dataParent:'parent'
+  }
+render(){
+    return(
+{this.state.name}
+    );
+}
+}

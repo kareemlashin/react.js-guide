@@ -1,0 +1,86 @@
+library javascript to build 
+-  spa / (user interface)
+by facebook 2011 
+--------------------------------
+view 
+--------------------------------
+dynamic web app
+-------------------------------
+component
+--------
+main 
+footer 
+nav 
+=> website as slice globally view 
+=> sharing
+------------------------------
+jsx 
+---
+javascript xml=> html in javascript
+------------------------------
+virtual dom 
+-----------
+any edit compare edit fast
+fast  
+=> make renderer real dom -> virtual dom
+=> update dom
+=> diffing
+------------------------------
+jsx to html => by  babel
+ReactDom.render("<p>value</p>",document.getElementById("place"))
+binding expression {value}
+-------------
+jsx
+---
+(
+<p>
+<span>value</span>
+</p>
+);
+----------------------------
+createElement
+-------------
+babel => react.createElement
+React.createElement('Tag',attribute|null,children)
+React.createElement(
+'nameTag',{className:'value',attribute:'value'},
+React.createElement("tag",attribute,"value")
+)
+
+
+--------------------------------------------------------------
+jsx   =>  babel                  |createElement
+----                             |--------------
+                                 |let ele = React.createElement("p",
+let ele=(                        |{| class: "ss",| attr: "dd" },
+<p class="ss" attr="dd">dddddd   |"dddddd", 
+    <span>ccccccccc              | React.createElement("span", null, "ccccccccc", 
+      <div>dddddd</div>          |React.createElement("div", null, "dddddd")));
+    </span>                      |
+  </p>                           |
+)                                |
+--------------------------------------------------------------
+component 
+---------
+independent reusable pieces 
+component as function
+
+function name(){
+    return(
+        <div>
+            <p>value</p>
+        </div>
+    )
+}
+ReactDom.render(<name />,document.getElementById("place"))
+-------------------------------------------------------------- 
+import React from 'React'
+class name extend React.component{
+    render(
+        return(
+        <div>
+            <p>value</p>
+        </div>
+        )
+    )
+}

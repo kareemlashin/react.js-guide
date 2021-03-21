@@ -1,0 +1,17 @@
+//import React
+import React from 'react';
+
+ export class name extends React.component{render(){return}} 
+
+class Nav extends React.Component { 
+  render () {
+    return (
+      <div className="NavWrapper">
+        Test content content content content
+      </div>
+    );
+  }
+}
+
+
+export default Nav;

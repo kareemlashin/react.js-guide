@@ -1,0 +1,5 @@
+<component name="value" />  in parent
+{this.props.name}           in child
+
+pass data from parent to child 
+can't change
