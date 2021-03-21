@@ -8,6 +8,11 @@ export class App extends React.Component {
     name:"value",
     dataParent:'parent'
   }
+  function=()=>{
+    this.setState({
+      name:'value'
+    })
+  }
 render(){
     return(
 {this.state.name}

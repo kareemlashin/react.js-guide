@@ -1,0 +1,1 @@
+{this.state.name.map(d=>(<li key={d.name}> {d.name}</li>))}

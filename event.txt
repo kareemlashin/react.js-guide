@@ -1,0 +1,25 @@
+class Header extends PureComponent { 
+event=()=>{
+
+}
+event=(e)=>{
+e.preventDefault();
+}
+}
+
+<button onclick={this.event}>name</button>
+onClick
+onKeyDown
+onKeyPress
+onKeyUp
+onBlur
+onFocus
+onChange
+onSubmit
+onMouseDown
+onMouseEnter
+onMouseLeave
+onMouseMove
+onMouseOut
+onMouseOver
+onScroll

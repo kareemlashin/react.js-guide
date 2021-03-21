@@ -1,0 +1,20 @@
+
+/* 
+class base component 
+declare component by class
+-----
+-------------------------------------
+function component
+declare component by function
+--------
+-------------------------------------------------
+
+Stateful (container component)
+-----
+class base 
+has state
+--------
+Stateless 
+------
+has not state
+*/
