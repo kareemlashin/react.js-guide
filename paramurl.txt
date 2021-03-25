@@ -1,0 +1,5 @@
+{this.props.match.params.id}
+<Link to={'/Single/'+x.id}>Single</Link> </div>
+import {
+  Link 
+} from "react-router-dom";

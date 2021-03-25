@@ -1,0 +1,1 @@
+<li key={user.name} style={{'color':user.age>20?'red':'blue'}}>{user.name}</li>

@@ -1,0 +1,18 @@
+PARENT 
+state={
+    pass:''
+}
+  news=(pa)=>{
+    this.setState({
+      ...this.state,
+      pass:pa
+    })
+  }
+
+<Sup z={this.news} '>
+
+CHILD
+  bb=()=>{
+    this.props.z('data data data data')
+  }
+        <button onClick={this.bb}>bb bb</button>

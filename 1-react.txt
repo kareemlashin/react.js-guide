@@ -52,7 +52,7 @@ React.createElement("tag",attribute,"value")
 jsx   =>  babel                  |createElement
 ----                             |--------------
                                  |let ele = React.createElement("p",
-let ele=(                        |{| class: "ss",| attr: "dd" },
+let ele=(                        |{class: "ss",| attr: "dd" },
 <p class="ss" attr="dd">dddddd   |"dddddd", 
     <span>ccccccccc              | React.createElement("span", null, "ccccccccc", 
       <div>dddddd</div>          |React.createElement("div", null, "dddddd")));

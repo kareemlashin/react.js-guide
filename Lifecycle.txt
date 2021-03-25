@@ -1,0 +1,29 @@
+Lifecycle
+---------
+methods in time 
+
+constructor init class (first) 
+{
+    super();
+}
+------------------------------
+(second)
+render(){
+    return(
+
+    )
+}
+------------------------------
+class loaded
+componentDidMount=()=>{
+
+}
+
+------------------------------
+componentDidUpdate=(prevProps,prevState)=>{
+
+}
+any change
+------------------------------
+
+------------------------------
