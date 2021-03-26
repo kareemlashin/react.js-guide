@@ -1,0 +1,24 @@
+    <div
+      class="search-results box-scrol container mb-5 mt-3"
+      id="scroll"
+      (scroll)="onMousewheel()"
+    >
+      <div class="row" id="all">
+      </div>
+      </div>
+      
+   onMousewheel() {
+      var layout = document.getElementById("scroll");
+      var pannel2 = document.getElementById("all");
+      let allH = layout.scrollTop;
+      let allH3 = pannel2.scrollHeight;
+      if (allH >= allH3 - 700) {
+        this.pageNumber = 1 + this.pageNumber;
+        this.function("scrolling", this.pageNumber);
+      }
+    }
+    .box-scrol {
+    height: 700px;
+    overflow-y: scroll;
+}
+
