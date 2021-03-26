@@ -1,0 +1,24 @@
+// import lazy Suspense
+import React ,{lazy,Suspense} from 'react';
+
+const Nav=lazy(()=>import('./Nav/Nav'))
+const Header=lazy(()=>import('./Header/Header'))
+const Form=lazy(()=>import('./Form/Form'))
+const Single=lazy(()=>import('./Single/Single'))
+const Forms=lazy(()=>import('./Forms/Forms'))
+
+//parent
+export class App extends React.Component {
+  
+  render () {
+    return (
+        // used to promise full complete
+      <Suspense fallback={<div></div>}>
+      <div className="App">
+        <header className="App-header">
+        </header>
+      </div>
+      </Suspense>
+    );
+  }
+}

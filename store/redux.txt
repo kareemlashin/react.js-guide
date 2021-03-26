@@ -1,0 +1,37 @@
+package 
+-------
+- data to share in all component
+- to get data 
+------------------------------------------
+store save state 
+
+|
+~
+view 
+
+action data object => call reducer
+
+reducers change data => function return data
+---------------------------------
+instal
+------
+npm i redux react-redux redux-thunk
+
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+
+import {Provider} from 'react-redux'
+import nameStore from './store/store'
+export class App extends React.Component {
+  
+  render () {
+    return (
+        <Provider store={nameStore}>
+
+        </header>
+      </div>
+      </Provider>
+
+    );
+  }
+}

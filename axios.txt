@@ -1,16 +1,1 @@
 import axios from 'axios'
-
-state={
-  users : [],
-}
-componentDidMount=()=> {
-  axios.get("https://jsonplaceholder.typicode.com/users").then(
-    res=>{
-      this.setState(
-        {
-          users:res.data
-        }
-      )
-    }
-  )
-}
