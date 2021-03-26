@@ -1,41 +1,13 @@
 import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-//import { Test } from './Dynamic.styles';
 import * as Yup from 'yup'
-
 import { Formik, Field, Form, ErrorMessage, FieldArray } from 'formik'
 
 class Dynamic extends PureComponent {
   constructor(props) {
     super(props)
-
     this.state = {
       hasError: false,
     }
-  }
-
-  componentWillMount = () => {
-    console.log('Dynamic will mount')
-  }
-
-  componentDidMount = () => {
-    console.log('Dynamic mounted')
-  }
-
-  componentWillReceiveProps = (nextProps) => {
-    console.log('Dynamic will receive props', nextProps)
-  }
-
-  componentWillUpdate = (nextProps, nextState) => {
-    console.log('Dynamic will update', nextProps, nextState)
-  }
-
-  componentDidUpdate = () => {
-    console.log('Dynamic did update')
-  }
-
-  componentWillUnmount = () => {
-    console.log('Dynamic will unmount')
   }
   onSubmit = (values) => {
     console.log(values)
