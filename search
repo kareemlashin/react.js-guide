@@ -1,0 +1,13 @@
+{
+      if (this.state.search) {
+         if (this.state.search) {
+         this.props.data.filter(x=>{ 
+        return  x.countryRegion.toLowerCase().includes(this.search.toLowerCase())
+        }
+        );
+      } else {
+        return this.$store.getters.all;
+      }
+      } else {
+ this.props.data
+ }
