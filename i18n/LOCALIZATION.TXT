@@ -1,0 +1,40 @@
+npm i i18next react-i18next i18next-http-backend  i18next-browser-languagedetector --save
+------------------------------------------
+app.js
+-----
+import './i18n'
+-------------------------------------------
+public 
+--------
+locales/[ar-en]/translation.json
+-------------------------------------------
+import i18next from 'i18next'
+{i18next.t('name')}
+-------------------------------------------
+import React from 'react';
+import { withTranslation } from 'react-i18next';
+class Nav extends React.Component { 
+constructor() {
+  super();
+  
+}
+ render () {
+    const { t ,i18n} = this.props;
+  const  change=(lang)=>{
+      i18n.changeLanguage(lang)
+    }
+    return (
+      <div className="NavWrapper">
+             <h1>{t('title')}</h1>
+
+      <div>
+        
+      <button onClick={() => change('ar')}>de</button>
+        <button onClick={() => change('en')}>en</button>
+      
+      </div>
+    );
+  }
+}
+
+export default withTranslation()(Nav);

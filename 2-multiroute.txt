@@ -1,0 +1,54 @@
+
+              <Router>
+                <NavLink activeClassName="activea" to="/">
+                  home
+                </NavLink>
+                <NavLink activeClassName="activea" to="/Header">
+                  Header
+                </NavLink>
+                <NavLink activeClassName="activea" to="/Form">
+                  Form
+                </NavLink>
+                <NavLink activeClassName="activea" to="/Forms">
+                  Forms
+                </NavLink>
+                <NavLink activeClassName="activea" to="/Dynamic">
+                  Dynamic
+                </NavLink>
+                <NavLink activeClassName="activea" to="/StateMangeMent">
+                  StateMangeMent
+                </NavLink>
+                <Switch>
+                  <Route exact path="/" component={Nav} />
+                  <Route path={['/Header', '/Sup']}>
+                    <Guest>
+                      <Switch>
+                        <Route path="/Header" component={Header} />
+                        <Route path="/Sup" component={Sup} />
+                      </Switch>
+                    </Guest>
+                  </Route>
+                  <Route path={['/Form', '/Single/:id',"/Forms","/Dynamic"]}>
+                    <Sign>
+                      <Switch>
+                        <Route path="/Form" component={Form} />
+                        <Route path="/Single/:id" component={Single} />
+                        <Route path="/Forms" component={Forms} />
+                        <Route path="/Dynamic" component={Dynamic} />
+                      </Switch>
+                    </Sign>
+                  </Route>
+                  <Route path={['/StateMangeMent']}>
+                    <Dashboard>
+                      <Switch>
+                        <Route
+                          path="/StateMangeMent"
+                          component={StateMangeMent}
+                        />
+                      </Switch>
+                    </Dashboard>
+                  </Route>
+                  <Redirect path="*" to="/" />
+                </Switch>
+              </Router>
+         
