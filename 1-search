@@ -1,0 +1,6 @@
+{this.state.table.filter(x=>{return x.toLowerCase().includes(this.state.search.toLowerCase())})
+                .length}
+                  
+                {this.state.table.filter(x=>{return x.toLowerCase().includes(this.state.search.toLowerCase())})
+                .map((v)=>(<div key={v}> {v} </div>))}
+                  
