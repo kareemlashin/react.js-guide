@@ -1,0 +1,26 @@
+
+        <Base>
+          <Router>
+            <Switch>
+              <Route path={['/Home']}>
+                <Home>
+                  <Switch>
+                    <Route path="/Home" component={Home} />
+                  </Switch>
+                </Home>
+              </Route>
+              <Route path={['/loadMore','/','*']}>
+                <Main>
+                  <Switch>
+                    <Route path="/loadMore" component={LoadMore} />
+                    <Redirect path='/' to="/home"/>
+                    <Redirect path='*' to="/home"/>
+
+                  </Switch>
+                </Main>
+              </Route>
+            </Switch>
+
+          </Router>
+        </Base>
+        
