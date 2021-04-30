@@ -1,0 +1,27 @@
+      <Router>
+        <Switch>
+          <Route path="/login" component={Login} />
+
+          {
+          roles == 'Guest' ? (
+            <Route path={['/Guest']}>
+              <Guest>
+                <Switch>
+                  <Route path="/Guest" component={Guest} />
+                </Switch>
+              </Guest>
+            </Route>
+          ) : roles == 'Home' ?(
+            <Route path={['/Home']}>
+              <Admin>
+                <Switch>
+                  <Route path="/Home" component={Admin} />
+                </Switch>
+              </Admin>
+            </Route>
+          ):
+          ''
+          }
+          {token && roles== 'Guest' ? <Redirect to="/Guest" /> : token && roles =='Home' ? <Redirect to="/Home" /> :  <Redirect to="/login" />}
+        </Switch>
+      </Router>
