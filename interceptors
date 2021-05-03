@@ -1,0 +1,29 @@
+
+    axios.interceptors.request.use((config)=> {
+      return config;
+    }, function(error) {
+      return Promise.reject(error);
+    });
+    
+    axios.interceptors.response.use((response)=> {
+      setTimeout(() => {
+        this.setState({
+          hasError: false,
+  
+        })
+          
+      }, 5000);
+      
+      return response;
+    }, (error)=> {
+      setTimeout(() => {
+        this.setState({
+          hasError: false,
+  
+        })
+          
+      }, 5000);
+      
+      return Promise.reject(error);
+    });
+    
