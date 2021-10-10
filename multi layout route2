@@ -1,0 +1,35 @@
+ <Router>
+        <Link to="/Add">Add</Link>
+        <Link to="/About">About</Link>
+        <Link to="/Contact">Contact</Link>
+        <Link to="/Remove">Remove</Link>
+        <Link to="/Forms">Forms</Link>
+        <Link to="/Users/5">Users5</Link>
+        <Switch>
+
+          <Route path={["/Forms", "/About",'/Add']}>
+            <Admin>
+              <Switch>
+              <Route path="/Add" component={Add} />
+                <Route path="/Forms" component={Forms} />
+                <Route path="/About" component={About} />
+      
+              </Switch>
+            </Admin>
+          </Route>
+
+          <Route path={["/Contact", "/Remove", "/Users/:id","/Links"]}>
+            <Guest>
+              <Switch>
+                <Route path="/Users/:id" component={Users} />
+                <Route path="/Contact" component={Contact} />
+                <Route path="/Remove" component={Remove} />
+                <Route path="/Links" component={Links} />
+              </Switch>
+            </Guest>
+          </Route>
+          <Redirect path="*" to="/Links" />
+          <Redirect path="/"  to="/Add"/>
+
+        </Switch>
+      </Router>
